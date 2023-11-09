@@ -56,7 +56,7 @@ allInfo.join("","");";
 
         public string ictima_meydanı = @"var el=document.querySelector(""[href*='place']"");el.click();";
         private string casus_gonder = @"var el=document.querySelector(""[type='text'][class='target-input-field target-input-autocomplete ui-autocomplete-input']"");el.value=""{0}"";var el=document.querySelector(""[id='unit_input_spy'][name='spy']"");el.value=""1"";var el=document.querySelector(""[id='target_attack'][type='submit']"");el.click();";
-        private string kilic_mizrak_gonder = @"var el=document.querySelector(""[type='text'][class='target-input-field target-input-autocomplete ui-autocomplete-input']"");el.value=""{0}"";var el=document.querySelector(""[id='unit_input_spy'][name='spy']"");el.value=""0"";var el=document.querySelector(""[id='unit_input_spear'][name='spear']"");el.value=""3"";var el=document.querySelector(""[id='unit_input_sword'][name='sword']"");el.value=""2"";var el=document.querySelector(""[id='target_attack'][type='submit']"");el.click();";
+        private string kilic_mizrak_gonder = @"var el=document.querySelector(""[type='text'][class='target-input-field target-input-autocomplete ui-autocomplete-input']"");el.value=""{0}"";var el=document.querySelector(""[id='unit_input_spy'][name='spy']"");el.value=""0"";var el=document.querySelector(""[id='unit_input_spear'][name='spear']"");el.value=""{1}"";var el=document.querySelector(""[id='unit_input_sword'][name='sword']"");el.value=""{2}"";var el=document.querySelector(""[id='target_attack'][type='submit']"");el.click();";
 
         private string casus_gonder_onay = @"var el=document.getElementById(""troop_confirm_submit"");el.click();";
         private string send_troop_check = @"var el=document.querySelector(""[class='place-confirm-new-attack']"");el;";
@@ -318,7 +318,7 @@ result;";
         }
 
 
-        public async Task kilic_mizrak_gonder_f(Dictionary<int, List<string>> barbar_dict, int mesafe)
+        public async Task kilic_mizrak_gonder_f(Dictionary<int, List<string>> barbar_dict, int mesafe,int mizrak,int kilic)
         {
             for (int i = 0; i < barbar_dict.Keys.Count; i++)
             {
@@ -326,7 +326,7 @@ result;";
                 if (int.Parse(temp_koy[1]) <= mesafe)
                 {
 
-                    await script_uygula(kilic_mizrak_gonder, temp_koy[0]);
+                    await script_uygula(kilic_mizrak_gonder, temp_koy[0],mizrak.ToString(),kilic.ToString());
 
                     var result = (string)await script_uygula(send_troop_check);
                     while (result == "null")

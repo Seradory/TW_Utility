@@ -62,6 +62,10 @@
             this.button_kor_saldiri = new System.Windows.Forms.Button();
             this.button_tekil_kor = new System.Windows.Forms.Button();
             this.button_tekil_yagma = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textBox_kor_kilic = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textBox_kor_mizrak = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // process1
@@ -408,11 +412,51 @@
             this.button_tekil_yagma.UseVisualStyleBackColor = true;
             this.button_tekil_yagma.Click += new System.EventHandler(this.button_tekil_yagma_Click);
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(391, 311);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(59, 13);
+            this.label11.TabIndex = 37;
+            this.label11.Text = "Kılıç Sayısı:";
+            // 
+            // textBox_kor_kilic
+            // 
+            this.textBox_kor_kilic.Enabled = false;
+            this.textBox_kor_kilic.Location = new System.Drawing.Point(465, 308);
+            this.textBox_kor_kilic.Name = "textBox_kor_kilic";
+            this.textBox_kor_kilic.Size = new System.Drawing.Size(45, 20);
+            this.textBox_kor_kilic.TabIndex = 36;
+            this.textBox_kor_kilic.Text = "3";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(391, 287);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(71, 13);
+            this.label12.TabIndex = 35;
+            this.label12.Text = "Mizrak Sayısı:";
+            // 
+            // textBox_kor_mizrak
+            // 
+            this.textBox_kor_mizrak.Enabled = false;
+            this.textBox_kor_mizrak.Location = new System.Drawing.Point(465, 286);
+            this.textBox_kor_mizrak.Name = "textBox_kor_mizrak";
+            this.textBox_kor_mizrak.Size = new System.Drawing.Size(45, 20);
+            this.textBox_kor_mizrak.TabIndex = 34;
+            this.textBox_kor_mizrak.Text = "2";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.textBox_kor_kilic);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.textBox_kor_mizrak);
             this.Controls.Add(this.button_tekil_yagma);
             this.Controls.Add(this.button_tekil_kor);
             this.Controls.Add(this.button_kor_saldiri);
@@ -490,6 +534,10 @@
         private System.Windows.Forms.Button button_kor_saldiri;
         private System.Windows.Forms.Button button_tekil_yagma;
         private System.Windows.Forms.Button button_tekil_kor;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox textBox_kor_kilic;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox textBox_kor_mizrak;
     }
 }
 

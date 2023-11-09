@@ -173,7 +173,8 @@ namespace KLANLAR_BOT
                 textBox_max_sur_seviyesi.Enabled = true;
                 textBox_yagma_per.Enabled = true;
                 checkBox_okcu_var_mi.Enabled = true;
-                //textBox_kor_saldırı_per.Enabled = true;
+                textBox_kor_kilic.Enabled = true;   
+                textBox_kor_mizrak.Enabled = true;    
 
                 
 
@@ -261,7 +262,7 @@ namespace KLANLAR_BOT
                     koy_yagma_ayarlari.Add(item * 10 + 2, yagma_ABC.ToString());
                 }
 
-                if (koy_yagma_ayarlari.ContainsKey(item * 10 + 2))
+                if (koy_yagma_ayarlari.ContainsKey(item * 10 + 3))
                 {
                     // Anahtar zaten varsa, değeri güncelle
                     koy_yagma_ayarlari[item * 10 + 3] = textBox_max_sur_seviyesi.Text;
@@ -271,6 +272,33 @@ namespace KLANLAR_BOT
                     // Anahtar yoksa, yeni bir anahtar/değer çifti ekle
                     koy_yagma_ayarlari.Add(item * 10 + 3, textBox_max_sur_seviyesi.Text);
                 }
+
+
+
+                if (koy_yagma_ayarlari.ContainsKey(item * 10 + 4))
+                {
+                    // Anahtar zaten varsa, değeri güncelle
+                    koy_yagma_ayarlari[item * 10 + 4] = textBox_kor_mizrak.Text;
+                }
+                else
+                {
+                    // Anahtar yoksa, yeni bir anahtar/değer çifti ekle
+                    koy_yagma_ayarlari.Add(item * 10 + 4, textBox_kor_mizrak.Text);
+                }
+
+
+                if (koy_yagma_ayarlari.ContainsKey(item * 10 + 5))
+                {
+                    // Anahtar zaten varsa, değeri güncelle
+                    koy_yagma_ayarlari[item * 10 + 5] = textBox_kor_kilic.Text;
+                }
+                else
+                {
+                    // Anahtar yoksa, yeni bir anahtar/değer çifti ekle
+                    koy_yagma_ayarlari.Add(item * 10 + 5, textBox_kor_kilic.Text);
+                }
+
+
 
 
 
@@ -432,7 +460,7 @@ namespace KLANLAR_BOT
 
                         await web_c.script_uygula(web_c.ictima_meydanı);
 
-                        await web_c.kilic_mizrak_gonder_f(dict, int.Parse(koy_yagma_ayarlari[10 * islem_yapilan_koy_indeks]));
+                        await web_c.kilic_mizrak_gonder_f(dict, int.Parse(koy_yagma_ayarlari[10 * islem_yapilan_koy_indeks]), int.Parse(koy_yagma_ayarlari[(10 * islem_yapilan_koy_indeks) + 4]), int.Parse(koy_yagma_ayarlari[(10 * islem_yapilan_koy_indeks) + 5]));
 
                     }
 
