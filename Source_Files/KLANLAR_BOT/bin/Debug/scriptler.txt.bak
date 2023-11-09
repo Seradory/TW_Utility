@@ -1,0 +1,54 @@
+scriptler>
+
+
+
+
+
+köye göre aratma="var el=document.querySelector("[type='radio'][name='target_type'][value='village_name']");el.click();";
+
+harita sayfasına git="var el=document.querySelector("[href='/game.php?village=13573&screen=map']"); el.click();";
+
+barbar yazdır = var inputElement = document.querySelector('.target-input-field');inputElement.value = "Barbar Köy";var event = new Event('input', {'bubbles': true,'cancelable': true});inputElement.dispatchEvent(event);
+
+bar köylerini göster ="var el=document.getElementsByClassName("village-item village-more");el[0].click();"
+
+bar köyünü listeye kaydet ver gönder="var villageItems = document.querySelectorAll('.village-item');
+var allInfo = [];  // Bilgileri saklamak için bir dizi
+
+villageItems.forEach(function(villageItem, index) {
+    // Eğer bu eleman son eleman değilse işleme devam et
+    if (index !== villageItems.length - 1) {
+        var villageName = villageItem.querySelector('.village-name').textContent;
+        var villageInfo = villageItem.querySelector('.village-info').textContent;
+        var villageDistance = villageItem.querySelector('.village-distance').textContent;
+
+        // Her bir village-item için bilgileri diziye ekleyin
+        allInfo.push(villageName, villageInfo, villageDistance);
+    }
+});
+console.log(allInfo.join(", "));"
+
+
+
+
+
+giriş=var el=document.querySelector("[id='remember-me'][name='remember-me']");if(el.checked){el.click();}var el=document.querySelector("[id='user'][type='text']");el.value="Serador";var el=document.querySelector("[id='password'][name='password']");el.value="Gjetuunwa3*";var el=document.getElementsByClassName("btn-login");el[0].click();
+
+
+
+
+
+
+captch checker=var el=document.querySelector("[class='no-selection'][style*='width']");el; yokken dönüşü="null"
+
+el[{0}].click();
+
+koy sec=var el=document.getElementById("production_table");
+var result="";
+if(el!='null'){
+    var el2=el.querySelectorAll("[class='quickedit-label'][data-text]");
+    for(var i=0;i<el2.length;i++){
+        result+=el2[i].innerText+",";
+    }
+}
+result;

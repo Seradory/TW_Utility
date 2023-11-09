@@ -1,0 +1,1 @@
+﻿var el=document.querySelector("[type='radio'][name='target_type'][value='village_name']");el.click();
