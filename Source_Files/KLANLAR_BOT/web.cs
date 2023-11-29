@@ -379,11 +379,12 @@ result;";
             //temp_koy_sur = temp_koy_sur.Remove(0, 1);
             //yagma_surlar_l = temp_koy_sur.Split(new char[] { ',' }).ToList();
             yagma_surlar_l = tirnak_sil(temp_koy_sur);
-            while (yagma_surlar_l.Contains("?"))
+           
+            while (yagma_surlar_l.Contains("?") )
             {
                 yagma_surlar_l[yagma_surlar_l.IndexOf("?")] = "99";
             }
-
+            
 
             sayfadaki_yagma_sayisi = int.Parse(tirnak_sil_virgulsuz((string)await script_uygula(sayfadaki_yagma_sayisi_s)));
 
@@ -457,7 +458,7 @@ result;";
 
             sayfa_sayisi = int.Parse((string)await script_uygula(sayfa_sayisi_s)) + 2;
             mevcut_sayfa = int.Parse(tirnak_sil_virgulsuz((string)await script_uygula(mevcut_sayfa_s)));
-            if (sayfa_sayisi != 0)
+            if (sayfa_sayisi != 0 && mevcut_sayfa!=0)
             {
                 sayfa_sayisi = sayfa_sayisi / 2;
                 if (mevcut_sayfa != sayfa_sayisi)
@@ -476,15 +477,48 @@ result;";
 
         private List<string> tirnak_sil(string s)
         {
-            s = s.Remove(s.Length - 2, 2);
-            s = s.Remove(0, 1);
-            return s.Split(new char[] { ',' }).ToList();
+            try
+            {
+
+                if (s != "null")
+                {
+                    if (!s.Contains("\"\""))
+                    {
+                        // s içinde iki çift tırnak karakteri yok.
+                    
+                    s = s.Remove(s.Length - 2, 2);
+                    s = s.Remove(0, 1);
+                    return s.Split(new char[] { ',' }).ToList();
+                    }
+                    else
+                    {
+                        List<string> return_list = new List<string>();
+
+                        return return_list;
+                    }
+                }
+                else {
+                    List<string>  return_list = new List<string>();
+                   
+                    return return_list; 
+                }
+            }
+            catch (Exception)
+            {
+
+
+                return null;
+            }
+
         }
         private string tirnak_sil_virgulsuz(string s)
         {
+            if (s != "null") { 
             s = s.Remove(s.Length - 1, 1);
             s = s.Remove(0, 1);
             return s;
+            }
+            else { return "0"; }
         }
 
         private bool asker_var_mi(List<string> mevcut, List<string> a_birim,int mizrak_atli)

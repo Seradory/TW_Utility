@@ -160,7 +160,7 @@
             this.textBox_maks_yagma_mesafesi.Name = "textBox_maks_yagma_mesafesi";
             this.textBox_maks_yagma_mesafesi.Size = new System.Drawing.Size(45, 20);
             this.textBox_maks_yagma_mesafesi.TabIndex = 7;
-            this.textBox_maks_yagma_mesafesi.Text = "9";
+            this.textBox_maks_yagma_mesafesi.Text = "18";
             this.textBox_maks_yagma_mesafesi.TextChanged += new System.EventHandler(this.textBox_maks_yagma_mesafesi_TextChanged);
             // 
             // button_gizle_goster
@@ -264,6 +264,8 @@
             // checkBox_Yagma_A
             // 
             this.checkBox_Yagma_A.AutoSize = true;
+            this.checkBox_Yagma_A.Checked = true;
+            this.checkBox_Yagma_A.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox_Yagma_A.Enabled = false;
             this.checkBox_Yagma_A.Location = new System.Drawing.Point(395, 119);
             this.checkBox_Yagma_A.Name = "checkBox_Yagma_A";
@@ -276,8 +278,6 @@
             // checkBox_Yagma_B
             // 
             this.checkBox_Yagma_B.AutoSize = true;
-            this.checkBox_Yagma_B.Checked = true;
-            this.checkBox_Yagma_B.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox_Yagma_B.Enabled = false;
             this.checkBox_Yagma_B.Location = new System.Drawing.Point(395, 142);
             this.checkBox_Yagma_B.Name = "checkBox_Yagma_B";
@@ -337,7 +337,7 @@
             this.textBox_max_sur_seviyesi.Name = "textBox_max_sur_seviyesi";
             this.textBox_max_sur_seviyesi.Size = new System.Drawing.Size(45, 20);
             this.textBox_max_sur_seviyesi.TabIndex = 25;
-            this.textBox_max_sur_seviyesi.Text = "1";
+            this.textBox_max_sur_seviyesi.Text = "0";
             this.textBox_max_sur_seviyesi.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
             // button_bilgiler
